@@ -19,7 +19,7 @@ build:
 .PHONY: install
 install: build
 	install -D --strip -T $(TARGET) $(BIN)
-	ln -sf $(BIN) $(PATH_BIN)
+	ln -sf $(subst $(DESTDIR),,$(BIN)) $(PATH_BIN)
 	mkdir -p $(CONFIG_DIR)
 	cp --no-clobber $(CONFIG) $(CONFIG_DIR)
 
