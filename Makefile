@@ -1,11 +1,11 @@
 PROG_NAME = interception-vimproved
 BUILD_DIR = build
 TARGET = $(BUILD_DIR)/$(PROG_NAME)
-BIN_DIR = /opt/interception
+BIN_DIR = $(DESTDIR)/opt/interception
 BIN = $(BIN_DIR)/$(PROG_NAME)
-PATH_DIR = /usr/local/bin
+PATH_DIR = $(DESTDIR)/usr/local/bin
 PATH_BIN = $(PATH_DIR)/$(PROG_NAME)
-CONFIG_DIR = /etc/interception-vimproved
+CONFIG_DIR = $(DESTDIR)/etc/interception-vimproved
 CONFIG = config.yaml
 
 .PHONY: all
